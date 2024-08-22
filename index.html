@@ -1,12 +1,53 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Projects</title>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <h1>Welcome to My GitHub Projects</h1>
-    <p>Here you can find a list of my projects and request access to them.</p>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="profile">
+                <img src="/Admin/Public/img/My.photo.jpg" alt="Your Name">
+                <h2>Rafael Alves</h2>
+                <p>Desenvolvedor de Soluções IOT</p>
+            </div>
+            <nav>
+                <ul>
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">CV</a></li>
+                    <li><a href="#">Apoie meu trabalho</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>            
+            <div class="social-icons">
+                <a href="www.linkedin.com/in/rafael-alves-oliveira-081231296" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/RafaellosAO10" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/rafaellos_dev/" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </aside>
+        <main class="content">
+            <section class="introduction">
+                <h1>Olá a todos! 👋</h1>
+                <h1>Eu sou o Rafael Alves</h1>
+                <p>Atuo como Desenvolvedor de Projetos em IoT, concentrando-me na criação e implementação de projetos baseados em Arduino, Esp 8266, Esp 32, e outros microcontroladores compatíveis. </p>
+                <button>Vamos nos conectar!</button>
+                <button>Contato</button>
+            </section>
+            <section class="projects">
+                <h2>Meus últimos projetos</h2>
+                <!-- List of projects -->
+            </section>
+            <section class="blog">
+                <h2>Últimas informações do Blog</h2>
+                <!-- Blog posts -->
+            </section>
+        </main>
+    </div>
 </body>
 </html>

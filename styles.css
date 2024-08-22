@@ -1,0 +1,237 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: rgb(15, 23, 42);
+    color: #fff;
+    padding: 20px;
+    border-radius: 0 0 15px 15px;
+    position: fixed;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: rgb(31, 41, 55);
+    border-radius: 15px;
+}
+
+.sidebar img {
+    width: 120px;
+    height: 150px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.sidebar p {
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.sidebar ul li {
+    position: relative;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: rgb(31, 41, 55);
+    color: #3b82f6;
+    border-radius: 15px;
+}
+
+.sidebar ul li.active a {
+    color: #fff;
+    background-color: rgb(31, 41, 55);
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    margin-left: 270px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.introduction {
+    max-width: 1000px;
+    width: 100%;
+    text-align: center;
+}
+
+.introduction h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 10px;
+}
+
+.introduction p {
+    font-size: 1.2em;
+    color: #4a4a4a;
+}
+
+.projects {
+    text-align: center;
+}
+
+.projects h2 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #3b82f6;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.projects p {
+    font-size: 1.2em;
+    color: #4a4a4a;
+    margin-top: 10px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button {
+    background-color: #1f2937;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #3b82f6;
+    transform: scale(1.05);
+}
+
+/* Estilizações específicas para a página de projetos */
+.project-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: max-height 0.5s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    max-height: 700px; /* Defina uma altura maior inicialmente */
+    cursor: pointer;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.project-image {
+    width: 100%; /* Ocupa toda a largura */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.project-image img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.project-info {
+    flex-grow: 1;
+    overflow: hidden;
+    text-align: left;
+}
+
+.project-info h2,
+.project-info p.brief-description {
+    transition: opacity 0.3s ease; /* Transição suave para a opacidade */
+}
+
+.project-info h2 {
+    font-size: 1.6em;
+    margin: 0 0 10px 0;
+    color: #1f2937;
+}
+
+.project-info p {
+    color: #333;
+}
+
+.full-description {
+    display: none;
+    margin-top: 20px;
+}
+
+.project-item.expanded .full-description {
+    display: block;
+    overflow-y: auto; /* Permite a rolagem */
+}
+
+button {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 20px auto 0;
+}
+
+/* Ajustes para rolagem e visibilidade */
+.project-item.expanded {
+    max-height: none; /* Permite que a altura se ajuste ao conteúdo */
+    overflow-y: auto; /* Permite rolagem */
+}

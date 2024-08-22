@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Projetos - Rafael Alves</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="profile">
+                <img src="/Admin/Public/img/My.photo.jpg" alt="Rafael Alves">
+                <h2>Rafael Alves</h2>
+                <p>Desenvolvedor de Soluções IOT</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active"><a href="projects.html">Projects</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                    <li><a href="support.html">Apoie meu trabalho</a></li>
+                    <li><a href="contact.html">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/rafael-alves-oliveira-081231296" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/RafaellosAO10" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/rafaellos_dev/" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </aside>
+        <main class="content">
+            <section class="projects">
+                <h1>Meus Projetos</h1>
+                <p class="intro">Aqui você pode explorar alguns dos projetos em que tenho trabalhado. Esta página tem como objetivo principal a divulgação dos meus projetos, permitindo que você veja os detalhes técnicos e funcionais de cada um. Além disso, você pode solicitar acesso aos repositórios correspondentes para conhecer mais a fundo o código e as implementações feitas.</p>
+                
+                <div class="project-item" id="first-robot">
+                    <div class="project-image">
+                        <img src="/Admin/Public/img/Project_HPE.png" alt="First Robot">
+                    </div>
+                    <div class="project-info">
+                        <h2>First Robot</h2>
+                        <p class="brief-description">
+                            O "First Robot" é um projeto inovador que combina a funcionalidade de um braço robótico montado sobre uma plataforma 4WD, controlado remotamente via interface web.
+                        </p>
+                        <div class="full-description">
+                            <p><strong>Detalhes Técnicos:</strong></p>
+                            <ul>
+                                <li><strong>Controle via Wi-Fi:</strong> O "First Robot" utiliza a conectividade Wi-Fi da ESP32, criando um ponto de acesso próprio para permitir o controle remoto via página web. A interface web permite que o usuário manipule o braço robótico e controle o movimento do robô através de comandos simples, enviados diretamente para a ESP32.</li>
+                                <li><strong>Estrutura e Movimento:</strong> O braço robótico é composto por quatro servos-motores (Garra, Ombro, Cotovelo e Base), permitindo movimentos precisos em múltiplos eixos. A base motorizada é controlada por uma Ponte H L298, que gerencia os quatro motores DC responsáveis pela locomoção do robô em todas as direções (frente, trás, esquerda e direita).</li>
+                                <li><strong>Hardware Utilizado:</strong></li>
+                                <ul>
+                                    <li>ESP32 32S: Microcontrolador responsável pelo processamento e conectividade.</li>
+                                    <li>Ponte H L298: Controladora de motores que permite o movimento bidirecional dos motores DC.</li>
+                                    <li>4 Servo Motores: Responsáveis pelos movimentos do braço robótico.</li>
+                                    <li>Jumpers M/M, M/F e F/F: Conectores usados para a integração dos componentes.</li>
+                                    <li>Kit Braço Acrílico e Kit Carrinho 4WD: Estruturas físicas que formam o robô.</li>
+                                    <li>Limitador de Tensão Step Down: Protege e estabiliza a alimentação da ESP32.</li>
+                                    <li>Botão Gangorra Liga/Desliga: Fornece um controle simples para ligar e desligar o robô.</li>
+                                </ul>
+                            </ul>
+                            <p><strong>Funcionalidades:</strong></p>
+                            <ul>
+                                <li><strong>Controle do Braço Robótico:</strong> Através da interface web, o usuário pode controlar cada um dos servos-motores para realizar operações complexas, como agarrar, levantar e girar objetos.</li>
+                                <li><strong>Movimentação:</strong> A base 4WD permite ao "First Robot" mover-se em diferentes direções, com comandos enviados através da interface web, controlando a velocidade e direção dos motores.</li>
+                                <li><strong>Interface Web Amigável:</strong> A página HTML desenvolvida para o controle do robô é estilizada com CSS e utiliza JavaScript para enviar comandos à ESP32, oferecendo uma experiência de controle suave e responsiva.</li>
+                            </ul>
+                            <p>
+                                O "First Robot" é uma excelente demonstração de como integrar hardware e software para criar uma solução robótica funcional e acessível. Este projeto serve como uma base sólida para futuros desenvolvimentos em automação e robótica, podendo ser expandido com sensores adicionais e algoritmos de controle mais avançados.
+                            </p>
+                            <button>Solicitar Acesso</button> <!-- Botão movido para o final da descrição completa -->
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+    </div>
+    <script src="scripts.js"></script> <!-- Arquivo JS -->
+</body>
+</html>
