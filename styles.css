@@ -1,3 +1,5 @@
+/* Define a fonte padrão, remove margens e preenchimentos, 
+   e aplica uma cor de fundo e de texto para o corpo da página */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -6,10 +8,13 @@ body {
     color: #333;
 }
 
+/* Estiliza o contêiner principal com exibição em flexbox */
 .container {
     display: flex;
 }
 
+/* Define a largura, cor de fundo, cor do texto, preenchimento, 
+   borda arredondada e posição fixa para a barra lateral */
 .sidebar {
     width: 250px;
     background-color: rgb(15, 23, 42);
@@ -21,6 +26,8 @@ body {
     overflow-y: auto;
 }
 
+/* Estiliza o perfil na barra lateral com alinhamento central, 
+   espaçamento e cor de fundo */
 .profile {
     display: flex;
     flex-direction: column;
@@ -31,6 +38,8 @@ body {
     border-radius: 15px;
 }
 
+/* Estiliza a imagem do perfil na barra lateral com largura, altura, 
+   bordas arredondadas e espaçamento inferior */
 .sidebar img {
     width: 120px;
     height: 150px;
@@ -39,27 +48,37 @@ body {
     object-fit: cover;
 }
 
+/* Estiliza o título do perfil na barra lateral com alinhamento central 
+   e margem superior */
 .sidebar h2 {
     text-align: center;
     margin-top: 10px;
 }
 
+/* Estiliza o parágrafo do perfil na barra lateral com alinhamento central */
 .sidebar p {
     text-align: center;
 }
 
+/* Remove a estilização padrão da lista e define a largura total 
+   para a lista não ordenada na barra lateral */
 .sidebar ul {
     list-style: none;
     padding: 0;
     width: 100%;
 }
 
+/* Estiliza os itens da lista na barra lateral com posicionamento relativo, 
+   margem e alinhamento central */
 .sidebar ul li {
     position: relative;
     margin: 15px 0;
     text-align: center;
 }
 
+/* Estiliza os links dos itens da lista na barra lateral com cor, 
+   remoção de sublinhado, preenchimento, exibição em bloco 
+   e transições suaves para cor e fundo */
 .sidebar ul li a {
     color: #fff;
     text-decoration: none;
@@ -68,12 +87,15 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Altera o estilo dos links dos itens da lista na barra lateral ao passar o mouse */
 .sidebar ul li a:hover {
     background-color: rgb(31, 41, 55);
     color: #3b82f6;
     border-radius: 15px;
 }
 
+/* Estiliza o item ativo na barra lateral com cor de fundo, 
+   cor do texto e bordas arredondadas */
 .sidebar ul li.active a {
     color: #fff;
     background-color: rgb(31, 41, 55);
@@ -81,6 +103,7 @@ body {
     margin-bottom: 15px;
 }
 
+/* Estiliza os ícones sociais na barra lateral com espaçamento e alinhamento */
 .social-icons {
     margin-top: 20px;
     display: flex;
@@ -88,12 +111,16 @@ body {
     width: 100%;
 }
 
+/* Estiliza os links dos ícones sociais na barra lateral com cor, 
+   tamanho da fonte e remoção de sublinhado */
 .social-icons a {
     color: #fff;
     font-size: 1.5em;
     text-decoration: none;
 }
 
+/* Estiliza o contêiner de conteúdo principal com flex-grow, 
+   espaçamento interno e margem */
 .content {
     flex-grow: 1;
     padding: 20px;
@@ -103,12 +130,15 @@ body {
     align-items: center;
 }
 
+/* Estiliza a seção de introdução com largura máxima e alinhamento central */
 .introduction {
     max-width: 1000px;
     width: 100%;
     text-align: center;
 }
 
+/* Estiliza o título da introdução com tamanho, peso da fonte, 
+   cor e espaçamento inferior */
 .introduction h1 {
     font-size: 2.5em;
     font-weight: 700;
@@ -116,15 +146,20 @@ body {
     margin-bottom: 10px;
 }
 
+/* Estiliza o parágrafo da introdução com tamanho da fonte, 
+   cor e alinhamento */
 .introduction p {
     font-size: 1.2em;
     color: #4a4a4a;
 }
 
+/* Estiliza a seção de projetos com alinhamento central */
 .projects {
     text-align: center;
 }
 
+/* Estiliza o título da seção de projetos com tamanho da fonte, 
+   peso, cor, borda inferior e espaçamento */
 .projects h2 {
     font-size: 2.5em;
     font-weight: 700;
@@ -135,6 +170,8 @@ body {
     display: inline-block;
 }
 
+/* Estiliza o parágrafo da seção de projetos com tamanho da fonte, 
+   cor e espaçamento */
 .projects p {
     font-size: 1.2em;
     color: #4a4a4a;
@@ -144,6 +181,9 @@ body {
     margin-right: auto;
 }
 
+/* Estiliza os botões com cor de fundo, cor do texto, remoção de bordas, 
+   preenchimento, tamanho da fonte, peso da fonte, bordas arredondadas 
+   e transições */
 button {
     background-color: #1f2937;
     color: #fff;
@@ -156,12 +196,142 @@ button {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+/* Estiliza o botão ao passar o mouse, alterando a cor de fundo 
+   e aplicando um efeito de zoom */
 button:hover {
     background-color: #3b82f6;
     transform: scale(1.05);
 }
 
+/* Estilizações para o Feed dos meus últimos projetos */
+
+.news-projects {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.news-projects h2 {
+    font-size: 2em;
+    color: #1f2937;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #3b82f6;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+#news-project-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.news-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 15px;
+    width: 250px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-item img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.news-item h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #1f2937;
+}
+
+.news-item p {
+    font-size: 1em;
+    color: #4a4a4a;
+    margin-bottom: 10px;
+}
+
+.news-item small {
+    font-size: 0.8em;
+    color: #888;
+}
+
+.news-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilizações para o Feed de Notícias do Blog*/
+
+.news-feed {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.news-feed h2 {
+    font-size: 2em;
+    color: #1f2937;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #3b82f6;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+#news-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.news-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 15px;
+    width: 250px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-item img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.news-item h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #1f2937;
+}
+
+.news-item p {
+    font-size: 1em;
+    color: #4a4a4a;
+    margin-bottom: 10px;
+}
+
+.news-item small {
+    font-size: 0.8em;
+    color: #888;
+}
+
+.news-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
 /* Estilizações específicas para a página de projetos */
+
+/* Estiliza os itens do projeto com exibição em flexbox, 
+   direção da coluna, alinhamento central, espaçamento, 
+   cor de fundo, bordas arredondadas, sombra e transições */
 .project-item {
     display: flex;
     flex-direction: column;
@@ -173,65 +343,238 @@ button:hover {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: max-height 0.5s ease, transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
-    max-height: 700px; /* Defina uma altura maior inicialmente */
+    max-height: 250px; /* Altura inicial menor */
     cursor: pointer;
     max-width: 900px;
     margin: 0 auto;
     position: relative;
 }
 
+/* Estiliza os itens do projeto quando expandidos, 
+   permitindo maior altura e rolagem */
+.project-item.expanded {
+    max-height: 1000px; /* Altura após a expansão */
+    overflow-y: auto; /* Permite rolagem */
+}
+
+/* Aplica um efeito de zoom nos itens do projeto ao passar o mouse */
+.project-item:hover {
+    transform: scale(1.02); /* Efeito de zoom ao passar o mouse */
+}
+
+/* Estiliza a imagem do projeto com largura total, 
+   alinhamento central e espaçamento */
 .project-image {
     width: 100%; /* Ocupa toda a largura */
     text-align: center;
     margin-bottom: 20px;
 }
 
+/* Estiliza as imagens dentro do contêiner da imagem do projeto 
+   com largura, altura e bordas arredondadas */
 .project-image img {
     width: 300px;
     height: auto;
     border-radius: 10px;
 }
 
+/* Estiliza as informações do projeto com flex-grow, 
+   overflow oculto e alinhamento à esquerda */
 .project-info {
     flex-grow: 1;
     overflow: hidden;
     text-align: left;
 }
 
+/* Aplica uma transição suave para a opacidade nas informações do projeto */
 .project-info h2,
 .project-info p.brief-description {
     transition: opacity 0.3s ease; /* Transição suave para a opacidade */
 }
 
+/* Estiliza o título das informações do projeto com tamanho da fonte, 
+   margem e cor */
 .project-info h2 {
     font-size: 1.6em;
     margin: 0 0 10px 0;
     color: #1f2937;
 }
 
+/* Estiliza os parágrafos das informações do projeto com cor do texto */
 .project-info p {
     color: #333;
 }
 
+/* Estiliza a descrição completa do projeto com overflow oculto e altura */
 .full-description {
-    display: none;
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease, height 0.3s ease;
+}
+
+/* Estiliza o item do projeto expandido, 
+   permitindo a visualização completa da descrição */
+.project-item.expanded .full-description {
+    height: auto; /* Altera a altura da descrição quando expandida */
+    opacity: 1; /* Altera a opacidade da descrição quando expandida */
+}
+
+/* Estiliza o rodapé da página com cor de fundo, cor do texto, 
+   tamanho da fonte e alinhamento central */
+footer {
+    background-color: #1f2937;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9em;
+}
+
+/* Estiliza os links do rodapé com cor, transição e remoção de sublinhado */
+footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Altera a cor dos links do rodapé ao passar o mouse */
+footer a:hover {
+    color: #3b82f6;
+}
+
+/* Estiliza os links das páginas de projetos para exibição em bloco, 
+   alinhamento central, preenchimento, cor de fundo, cor do texto, 
+   bordas arredondadas e transição */
+.project-item a {
+    display: block;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #3b82f6;
+    color: #fff;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+}
+
+/* Aplica um efeito de zoom nos links das páginas de projetos 
+   ao passar o mouse */
+.project-item a:hover {
+    transform: scale(1.05);
+}
+
+/* Estiliza os links das páginas de projetos quando expandidos */
+.project-item.expanded a {
+    transform: scale(1); /* Remove o efeito de zoom na expansão */
+}
+
+/* Aplica um estilo personalizado para os botões de expansão, 
+   com exibição flexível, alinhamento central, espaçamento, 
+   cor de fundo, cor do texto, remoção de borda, bordas arredondadas, 
+   cursor de ponteiro e transição */
+.expand-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #1f2937;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Estiliza o botão de expansão ao passar o mouse */
+.expand-button:hover {
+    background-color: #3b82f6;
+}
+
+/* Estiliza o ícone no botão de expansão com tamanho da fonte, 
+   cor e margem */
+.expand-button i {
+    font-size: 1.2em;
+    color: #fff;
+    margin-left: 10px;
+}
+
+/* Estiliza a seção de contato com largura máxima, preenchimento, 
+   cor de fundo, bordas arredondadas, sombra e alinhamento central */
+.contact {
+    max-width: 1000px;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
     margin-top: 20px;
 }
 
-.project-item.expanded .full-description {
-    display: block;
-    overflow-y: auto; /* Permite a rolagem */
+/* Estiliza o título da seção de contato com tamanho da fonte, 
+   peso, cor e espaçamento */
+.contact h2 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #3b82f6;
+    padding-bottom: 10px;
+    display: inline-block;
 }
 
-button {
-    display: block;
+/* Estiliza os parágrafos da seção de contato com cor, 
+   tamanho da fonte e espaçamento */
+.contact p {
+    color: #4a4a4a;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* Estiliza o formulário de contato com exibição em flexbox, 
+   direção da coluna, alinhamento central e espaçamento */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Estiliza os campos de entrada do formulário com largura, 
+   preenchimento, tamanho da fonte, borda arredondada e sombra */
+.contact-form input,
+.contact-form textarea {
     width: 100%;
-    max-width: 200px;
-    margin: 20px auto 0;
+    padding: 15px;
+    font-size: 1em;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
 }
 
-/* Ajustes para rolagem e visibilidade */
-.project-item.expanded {
-    max-height: none; /* Permite que a altura se ajuste ao conteúdo */
-    overflow-y: auto; /* Permite rolagem */
+/* Estiliza o botão de envio do formulário com cor de fundo, 
+   cor do texto, remoção de borda, preenchimento, tamanho da fonte, 
+   peso da fonte, bordas arredondadas, cursor de ponteiro e transição */
+.contact-form button {
+    background-color: #3b82f6;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Estiliza o botão de envio do formulário ao passar o mouse */
+.contact-form button:hover {
+    background-color: #1f2937;
+}
+
+.button-container {
+    text-align: center; /* Centraliza o conteúdo dentro da div */
+    margin-top: 20px; /* Adicione espaço superior se necessário */
+}
+
+.button-container button {
+    display: inline-block; /* Garante que o botão seja tratado como um bloco inline */
 }
